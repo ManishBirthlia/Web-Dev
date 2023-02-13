@@ -1,0 +1,15 @@
+nav,.row{
+    width: 100vw;
+    margin: 0;
+}
+.h{
+    height: 100vh;
+}
+.main-content{
+    height: 100vh;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
