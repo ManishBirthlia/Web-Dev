@@ -1,15 +1,23 @@
 var numberOfDrum=document.querySelectorAll(".drum").length;
 document.addEventListener("keydown",function(event){
     makeSound(event.key);
+    makeAnimation(event.key);
 });
 for(var i=0;i<numberOfDrum;i++){
     document.querySelectorAll(".drum")[i].addEventListener("click",function(){
         var key=this.innerText;
-        console.log(key);
-        if(this.style.color=="white") this.style.color="#DA0463"
-        else this.style.color="white"
         makeSound(key);
+        makeAnimation(key);
     });
+}
+function makeAnimation(key){
+    var element=document.querySelector("."+key);
+    element.classList.add("pressed");
+    element.style.color="white"; 
+    setTimeout(function(){
+        element.classList.remove("pressed");
+        element.style.color="#DA0463";
+    },100);
 }
 function makeSound(key){
     var s;
