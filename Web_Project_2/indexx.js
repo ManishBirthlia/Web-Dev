@@ -1,30 +1,30 @@
 var DrumsLength=$(".drum").lenght;
 $(document).keydown(function(e){
-    // makeSound(e.key);
+    makeSound(e.key);
+    // ----------------- we want to use function here so we want to learn that -----------⬇️⬇️⬇️⬇️
     $("."+e.key).addClass("pressed");
     $("."+e.key).css("color","white");
     setTimeout(function(){
         $("."+e.key).removeClass("pressed");
         $("."+e.key).css("color","#DA0463")
     },100);
+
+
 });   
 $(".drum").on("click",function(){
-    // makeSound(this.innerText); // this.innerText == $(this).text();
-    makeSound($(this).text());
+    // makeSound(this.innerText); // ----------- this.innerText == $(this).text(); -------------
+    var s=$(this).text();
+    makeSound(s);
+    $("."+s).addClass("pressed");
+    $("."+s).css("color","white");
+    // if i replace s with $(this).text() then is is not working here  ⬇️⬇️⬇️⬇️
+    // ------------------ set time is not working here ----------------
+    setTimeout(function(){
+        $("."+s).removeClass("pressed");
+        $("."+s).css("color","#DA0463")
+    },100);
 });
-// $(".drum").click(function(){
-//     makeSound(this.innerText); // this.innerText == $(this).text();
-//     console.log($(this).text());
-// });
-// function addAnimation(key){
-//     var s=$("."+key);
-//     s.addClass("pressed");
-//     s.css("color","white");
-//     setTimeout(funtion(){
-//         s.removeClass("pressed");
-//         s.css("color","#DA0463");
-//     },100);
-// }
+
 function makeSound(key){
     var s;
     if(key=="w"){
@@ -44,3 +44,15 @@ function makeSound(key){
     }
     s.play();
 }
+// $(".drum").click(function(){
+//     makeSound(this.innerText); // this.innerText == $(this).text();
+//     console.log($(this).text());
+// });
+
+
+
+//----------------- need to learn about this a little bit more ------------------ ⬇️⬇️⬇️⬇️
+// function addAnimation(s){
+//     s.addClass("pressed");
+//     s.css("color","white");
+// }
