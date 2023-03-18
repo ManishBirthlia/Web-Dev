@@ -6,10 +6,8 @@ $(document).keydown(function(e){
     $("."+e.key).css("color","white");
     setTimeout(function(){
         $("."+e.key).removeClass("pressed");
-        $("."+e.key).css("color","#DA0463")
+        $("."+e.key).css("color","#DA0463");
     },100);
-
-
 });   
 $(".drum").on("click",function(){
     // makeSound(this.innerText); // ----------- this.innerText == $(this).text(); -------------
@@ -21,7 +19,7 @@ $(".drum").on("click",function(){
     // ------------------ set time is not working here ----------------
     setTimeout(function(){
         $("."+s).removeClass("pressed");
-        $("."+s).css("color","#DA0463")
+        $("."+s).css("color","#DA0463");
     },100);
 });
 
