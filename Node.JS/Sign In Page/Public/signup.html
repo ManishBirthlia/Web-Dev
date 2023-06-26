@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Sign Up</title>
+  </head>
+  <body class="align">
+    <div class="grid">
+      <form action="/" method="POST" class="form login">
+        <div class="form__field">
+          <label for="login__username"
+            >👤<span class="hidden">Username</span></label
+          >
+          <input
+            /* autocomplete="username" */
+            id="login__username"
+            type="text"
+            name="username"
+            class="form__input"
+            placeholder="Username"
+            required
+          />
+        </div>
+        <div class="form__field">
+          <label for="login__password"
+            >🔑<span class="hidden">Password</span></label
+          >
+          <input
+            id="login__password"
+            type="password"
+            name="password"
+            class="form__input"
+            placeholder="Password"
+            required
+          />
+        </div>
+        <div class="form__field">
+          <label for="login__username"
+            >✉️<span class="hidden">Email</span></label
+          >
+          <input
+            autocomplete="email"
+            id="login__username"
+            type="email"
+            name="email"
+            class="form__input"
+            placeholder="Email"
+            required
+          />
+        </div>
+        <div class="form__field">
+          <input type="submit" value="Sign Up" />
+        </div>
+      </form>
+      <p class="text--center">already a member? <a href="#">Sign In</a>🔜</p>
+    </div>
+  </body>
+</html>

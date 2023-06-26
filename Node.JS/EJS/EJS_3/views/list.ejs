@@ -1,0 +1,15 @@
+<%- include("header") -%>
+    <div class="box" id="heading">
+    <h1><%= todayDate %></h1></div>
+    <div class="box">
+        <form class="item" action="/" method="post">
+            <input type="text" autocomplete="off" placeholder="Type your message here" name="listPoint" required>
+            <button type="submit">+</button>
+        </form>
+        <% for(var i=0;i<ListItem.length;i++){ %>
+        <div class="item">
+            <input type="checkbox">
+            <p><%= ListItem[i] %></p>
+        </div>
+        <%}%>
+<%- include("footer") -%>
