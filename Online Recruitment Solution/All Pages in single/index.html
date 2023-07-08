@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Recruitment Management System</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="Login.css" />
+  </head>
+  <body>
+    <header class="sticky">
+      <nav>
+        <div class="max-width">
+          <img src="Logo.png" alt="Company Logo" />
+          <ul>
+            <li>
+              <a
+                style="cursor: pointer"
+                onclick="document.getElementById('hero').scrollIntoView()"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                style="cursor: pointer"
+                onclick="document.getElementById('Service').scrollIntoView()"
+                >Servies</a
+              >
+            </li>
+            <li>
+              <a
+                style="cursor: pointer"
+                onclick="document.getElementById('Jobs').scrollIntoView()"
+                >Jobs</a
+              >
+            </li>
+            <li>
+              <a
+                style="cursor: pointer"
+                onclick="document.getElementById('testimonials').scrollIntoView()"
+                >Testimonials</a
+              >
+            </li>
+            <li>
+              <a
+                style="cursor: pointer"
+                onclick="HandleLoginOpen()"
+                >Login</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero" id="hero">
+      <div class="heroflex">
+        <div class="hero-content">
+          <h1>
+            Transform Your Hiring Process with Our Online Recruitment Solution
+          </h1>
+          <p>
+            Streamline your hiring process with our efficient and user-friendly
+            solution.
+          </p>
+          <button class="cta-button" onclick="HandleLoginOpen()">
+            Get Started
+          </button>
+        </div>
+        <div class="heroImg">
+          <img src="Main-page.png" alt="This is image for Main section" />
+        </div>
+      </div>
+    </section>
+
+    <section class="mg-auto" id="Service">
+      <img src="bg element.png" />
+      <div class="features">
+        <img src="element.png" />
+        <h1 class="w-100 ft-45">Services we Offer</h1>
+        <div class="underline"></div>
+        <p
+          style="
+            color: #ccd2e9;
+            text-align: center;
+            font-size: 19px;
+            width: 100%;
+          "
+        >
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+          commodo ligula eget dolor. Aenean massa.
+        </p>
+        <div class="feature">
+          <img src="Job Posting.png" alt="Feature 1" />
+          <h2>Job Posting</h2>
+          <p>
+            Assist in creating and posting job openings across multiple
+            platforms, job boards & social media channels to attract qualified
+            candidates.
+          </p>
+        </div>
+        <div class="feature">
+          <img src="Candidate Sourcing.png" alt="Feature 1" />
+          <h2>Candidate Sourcing</h2>
+          <p>
+            Utilize advanced candidate sourcing techniques, such as resume
+            parsing, keyword etc, to identify and shortlist suitable candidates
+            for job vacancies.
+          </p>
+        </div>
+        <div class="feature">
+          <img src="Consultation.png" alt="Feature 1" />
+          <h2>Consultation</h2>
+          <p>
+            Provide guidance on job descriptions, candidate profiles, and
+            interview processes.
+          </p>
+        </div>
+        <div class="feature">
+          <img src="Recruitment.png" alt="Feature 1" />
+          <h2>Recruitment Strategy</h2>
+          <p>
+            Work closely with clients to develop tailored recruitment strategies
+            based on their specific needs, industry requirements, and
+            organizational culture.
+          </p>
+        </div>
+        <div class="feature">
+          <img src="ATS.png" alt="Feature 1" />
+          <h2>(ATS) Implementation</h2>
+          <p>
+            Configure an efficient ATS that centralizes candidate data &
+            streamlines the recruitment workflow
+          </p>
+        </div>
+        <div class="feature" id="Jobs">
+          <img src="Tracking.png" alt="Feature 1" />
+          <h2>Tracking</h2>
+          <p>
+            Generate data-driven reports on metrics such as source
+            effectiveness, time-to-fill, and candidate demographics to optimize
+            recruitment strategies.
+          </p>
+        </div>
+      </div>
+      <button>Learn More</button>
+    </section>
+
+    <section style="margin: 40px;">
+      <div class="testimonial-content">
+        <h2>Search For Jobs</h2>
+        <div class="cjsearchbox">
+          <script
+            language="javascript"
+            type="text/javascript"
+            src="https://www.careerjet.com/partners/js_searchbox.html?n=7&nfr=1"
+          ></script>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="mg-auto" id="Service">
+      <img src="element.png" />
+      <div class="features">
+        <img src="element2.png" />
+        <h1 class="w-100 ft-45">Search For Jobs</h1>
+        <div class="underline"></div>
+        <p
+          style="
+            color: #ccd2e9;
+            text-align: center;
+            font-size: 19px;
+            width: 100%;
+          "
+        >
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+          commodo ligula eget dolor. Aenean massa.
+        </p>
+        <div style="width: 100%" class="input-field">
+          <div class="inline-block">
+            <label for="Input-Location">Choose Location :</label>
+            <input
+              style="width: 100%"
+              type="text"
+              placeholder="Enter Location"
+              name="Location"
+              id="Input-Location"
+            />
+          </div>
+          <div class="inline-block">
+            <label for="Input-Job-Title">Choose Job :</label>
+            <input
+              style="width: 100%"
+              type="text"
+              placeholder="Enter job title"
+              name="Job-Title"
+              id="Input-Job-Title"
+            />
+          </div>
+          <button
+            style="
+              display: flex;
+              width: 277px;
+              height: 77px;
+              margin: auto;
+              text-align: center;
+              flex-direction: column;
+              justify-content: center;
+              flex-shrink: 0;
+            " onclick="fetchHandle()"
+          >
+            <p style="width: 100%">Find</p>
+          </button>
+        </div>
+        <div class="feature">
+          <img src="Job Posting.png" alt="Feature 1" />
+          <h2>Job Posting</h2>
+          <p>
+            Assist in creating and posting job openings across multiple
+            platforms, job boards & social media channels to attract qualified
+            candidates.
+          </p>
+        </div>
+      </div>
+      <button>Learn More</button>
+    </section> -->
+
+    <section class="cta" id="Login">
+      <h2>Ready to Streamline Your Recruitment Process?</h2>
+      <p>
+        Sign up for our online recruitment solution today and experience the
+        benefits firsthand.
+      </p>
+      <button class="cta-button" onclick="HandleLoginOpen()">Sign Up Now</button>
+      <section class="user" id="user">
+        <div class="user_options-container">
+          <div class="user_options-text">
+            <div class="user_options-unregistered">
+              <h2 class="user_unregistered-title">Don't have an account?</h2>
+              <p class="user_unregistered-text">
+                Banjo tote bag bicycle rights, High Life sartorial cray craft
+                beer whatever street art fap.
+              </p>
+              <button class="user_unregistered-signup" id="signup-button">
+                Sign up
+              </button>
+            </div>
+
+            <div class="user_options-registered">
+              <h2 class="user_registered-title">Have an account?</h2>
+              <p class="user_registered-text">
+                Banjo tote bag bicycle rights, High Life sartorial cray craft
+                beer whatever street art fap.
+              </p>
+              <button class="user_registered-login" id="login-button">
+                Login
+              </button>
+            </div>
+          </div>
+
+          <div class="user_options-forms" id="user_options-forms">
+            <div class="user_forms-login">
+              <h2 class="forms_title">Login</h2>
+              <form class="forms_form" onsubmit="HandleLogin()">
+                <fieldset class="forms_fieldset">
+                  <div class="forms_field">
+                    <input
+                      type="email"
+                      id="LoginEmail"
+                      placeholder="Email"
+                      class="forms_field-input"
+                      required
+                      autofocus
+                      />
+                    </div>
+                    <div class="forms_field">
+                      <input
+                      type="password"
+                      id="LoginPassword"
+                      placeholder="Password"
+                      class="forms_field-input"
+                      required
+                    />
+                  </div>
+                </fieldset>
+                <div class="forms_buttons">
+                  <button type="button" class="forms_buttons-forgot">
+                    Forgot password?
+                  </button>
+                  <input
+                    type="submit"
+                    value="Log In"
+                    class="forms_buttons-action"
+                  />
+                </div>
+              </form>
+            </div>
+            <div class="user_forms-signup">
+              <h2 class="forms_title">Sign Up</h2>
+              <form class="forms_form" onsubmit="HandleSignUp()">
+                <fieldset class="forms_fieldset">
+                  <div class="forms_field">
+                    <input
+                      type="text"
+                      id="SignupFullName"
+                      placeholder="Full Name"
+                      class="forms_field-input"
+                      required
+                    />
+                  </div>
+                  <div class="forms_field">
+                    <input
+                      type="email"
+                      id="SignupEmail"
+                      placeholder="Email"
+                      class="forms_field-input"
+                      required
+                    />
+                  </div>
+                  <div class="forms_field">
+                    <input
+                      type="password"
+                      id="SignupPassword"
+                      placeholder="Password"
+                      class="forms_field-input"
+                      required
+                    />
+                  </div>
+                </fieldset>
+                <div class="forms_buttons">
+                  <input
+                    type="submit"
+                    value="Sign up"
+                    class="forms_buttons-action"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="mg-auto" id="Service">
+      <img src="bg element.png" />
+      <div class="features">
+        <img src="element.png" />
+        <h1 class="w-100 ft-45">Testimonials</h1>
+        <div class="underline"></div>
+        <p
+          style="
+            color: #ccd2e9;
+            text-align: center;
+            font-size: 19px;
+            width: 100%;
+          "
+        >
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+          commodo ligula eget dolor. Aenean massa.
+        </p>
+      </div>
+      <div style="color: #ffffff;" class="testimonials" id="testimonials">
+        <h2>What our customers are saying</h2>
+        <div style="background: #ffffff; margin: auto;" class="underline"></div>
+        <div class="testimonial-profile">
+          <div class="inline-block">
+            <img src="image 5.png">
+            <div>
+              <h3>name</h3>
+              <p>title</p>
+            </div>
+          </div>
+          <div style="width: 442.529px;">
+            <p>“Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.” </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <footer>
+      <!-- <img src="element.png" /> -->
+      <div class="mg-auto">
+        <img src="element.png" />
+        <div style="width: 403.413px; height: 193.698px; flex-shrink: 0">
+          <img src="Logo.png" alt="" srcset="" />
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+            commodo ligula eget dolor. Aenean massa.
+          </p>
+          <p style="color: #ffffff9c">
+            &copy; 2023 Recruitment Management System. All rights reserved.
+          </p>
+        </div>
+        <div>
+          <h2>Company</h2>
+          <p style="color: #ffffff9c">About</p>
+          <p style="color: #ffffff9c">Testimonials</p>
+          <p style="color: #ffffff9c">Apps</p>
+        </div>
+        <div>
+          <h2>Region</h2>
+          <p style="color: #ffffff9c">Link</p>
+          <p style="color: #ffffff9c">Link</p>
+          <p style="color: #ffffff9c">Link</p>
+        </div>
+        <div>
+          <h2>Help</h2>
+          <p style="color: #ffffff9c">Help center</p>
+          <p style="color: #ffffff9c">Contact support</p>
+          <p style="color: #ffffff9c">Instructions</p>
+          <p style="color: #ffffff9c">How it works</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>
